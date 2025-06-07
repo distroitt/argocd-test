@@ -5,7 +5,3 @@ helmCharts:
   - name: echo-server
     repo: https://ealenn.github.io/charts
     releaseName: my-echo
-    version: 0.7.7        # нужная версия
-    valuesInline:         # можно задать значения, если нужно (например, тип сервиса)
-      service:
-        type: NodePort
