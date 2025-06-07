@@ -1,0 +1,31 @@
+image:
+  repository: cr.yandex/crp6vadrha2vm4h7a3bc/youtrack
+  tag: "2025.1.69895"
+  # tag: "2024.3.46677"
+  pullSecrets:
+  - mutex-cr
+
+deployment:
+  strategy: Recreate
+
+persistence:
+  enabled: true
+  size: 4Gi
+
+resources:
+  requests:
+    memory: 2.5Gi
+  limits:
+    memory: 3.5Gi
+
+ingress:
+  annotations:
+    #traefik.ingress.kubernetes.io/router.entrypoints: websecure
+  ingressClassName: nginx
+  enabled: true
+  hosts:
+    - yt.m3x.by
+  tls:
+    - hosts:
+      - yt.m3x.by
+      secretName: yt-m3x-tls

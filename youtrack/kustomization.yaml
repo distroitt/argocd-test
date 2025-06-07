@@ -1,0 +1,8 @@
+resources:
+  - cronjob.yaml
+  
+helmCharts:
+  - name: youtrack
+    repo: https://minicloudlabs.github.io/helm-charts
+    releaseName: youtrack
+    valuesFile: customvalues.yaml
